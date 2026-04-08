@@ -163,6 +163,16 @@ nav ul li a.active::after {
   transform: translateY(-1px);
 }
 
+.btn-dark {
+  background: var(--text);
+  color: var(--bg);
+}
+
+.btn-dark:hover {
+  background: #2d2a27;
+  transform: translateY(-1px);
+}
+
 .btn-full {
   width: 100%;
   text-align: center;
