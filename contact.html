@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Tim Barge</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">Tim Barge</a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="acting.html">Acting</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-header">
+    <div class="container">
+      <p class="page-label">Contact</p>
+      <h1>Let's make<br>something funny.</h1>
+      <p class="page-desc">Whether you're a brand, agency, casting director, or just a person with a genuinely great idea — I want to hear about it.</p>
+    </div>
+  </div>
+
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <div class="contact-form-col">
+          <h2>Send a message</h2>
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="subject">What's this about?</label>
+              <select id="subject" name="subject">
+                <option value="">Select one</option>
+                <option value="branded">Branded Content / Campaign</option>
+                <option value="acting">Acting / Casting</option>
+                <option value="writing">Writing / Script</option>
+                <option value="collab">Collaboration</option>
+                <option value="other">Something else</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="6" placeholder="Tell me about the project..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Send it</button>
+          </form>
+        </div>
+
+        <div class="contact-info-col">
+          <h2>Or reach out directly</h2>
+          <div class="contact-details">
+            <div class="contact-item">
+              <span class="contact-label">Email</span>
+              <a href="mailto:tim@timbarge.com" class="contact-value">tim@timbarge.com</a>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">Based in</span>
+              <span class="contact-value">Los Angeles, CA</span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">Representing</span>
+              <span class="contact-value">Agency name here</span>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <h3>Follow the work</h3>
+            <div class="social-grid">
+              <a href="#" class="social-btn">Instagram</a>
+              <a href="#" class="social-btn">TikTok</a>
+              <a href="#" class="social-btn">YouTube</a>
+              <a href="#" class="social-btn">LinkedIn</a>
+            </div>
+          </div>
+
+          <div class="contact-note">
+            <p>I try to respond within 24–48 hours. If it's urgent, say so in the subject line and I'll prioritize it.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>&copy; 2026 Tim Barge</span>
+      <div class="footer-links">
+        <a href="work.html">Work</a>
+        <a href="acting.html">Acting</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const btn = this.querySelector('button[type="submit"]');
+      btn.textContent = 'Message sent!';
+      btn.disabled = true;
+      btn.style.background = '#2a7a5a';
+    });
+  </script>
+
+</body>
+</html>

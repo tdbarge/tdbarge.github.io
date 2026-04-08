@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Work — Tim Barge</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">Tim Barge</a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="work.html" class="active">Work</a></li>
+      <li><a href="acting.html">Acting</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-header">
+    <div class="container">
+      <p class="page-label">Selected Work</p>
+      <h1>Funny ads.<br>Real results.</h1>
+      <p class="page-desc">Branded content, campaigns, and videos made for brands that want to be remembered for the right reasons.</p>
+    </div>
+  </div>
+
+  <section class="work-grid-section">
+    <div class="container">
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="branded">Branded Content</button>
+        <button class="filter-btn" data-filter="social">Social</button>
+        <button class="filter-btn" data-filter="campaign">Campaign</button>
+      </div>
+
+      <div class="work-grid">
+
+        <div class="work-card" data-category="branded">
+          <div class="work-thumb placeholder-thumb thumb-1">
+            <div class="play-btn">&#9654;</div>
+          </div>
+          <div class="work-info">
+            <span class="work-tag">Branded Content</span>
+            <h3>Project Title</h3>
+            <p>Brand Name &mdash; Short description of the work and what made it effective. One to two sentences max.</p>
+          </div>
+        </div>
+
+        <div class="work-card" data-category="social">
+          <div class="work-thumb placeholder-thumb thumb-2">
+            <div class="play-btn">&#9654;</div>
+          </div>
+          <div class="work-info">
+            <span class="work-tag">Social</span>
+            <h3>Project Title</h3>
+            <p>Brand Name &mdash; Short description of the work and what made it effective. One to two sentences max.</p>
+          </div>
+        </div>
+
+        <div class="work-card" data-category="campaign">
+          <div class="work-thumb placeholder-thumb thumb-3">
+            <div class="play-btn">&#9654;</div>
+          </div>
+          <div class="work-info">
+            <span class="work-tag">Campaign</span>
+            <h3>Project Title</h3>
+            <p>Brand Name &mdash; Short description of the work and what made it effective. One to two sentences max.</p>
+          </div>
+        </div>
+
+        <div class="work-card" data-category="branded">
+          <div class="work-thumb placeholder-thumb thumb-4">
+            <div class="play-btn">&#9654;</div>
+          </div>
+          <div class="work-info">
+            <span class="work-tag">Branded Content</span>
+            <h3>Project Title</h3>
+            <p>Brand Name &mdash; Short description of the work and what made it effective. One to two sentences max.</p>
+          </div>
+        </div>
+
+        <div class="work-card" data-category="social">
+          <div class="work-thumb placeholder-thumb thumb-5">
+            <div class="play-btn">&#9654;</div>
+          </div>
+          <div class="work-info">
+            <span class="work-tag">Social</span>
+            <h3>Project Title</h3>
+            <p>Brand Name &mdash; Short description of the work and what made it effective. One to two sentences max.</p>
+          </div>
+        </div>
+
+        <div class="work-card" data-category="campaign">
+          <div class="work-thumb placeholder-thumb thumb-6">
+            <div class="play-btn">&#9654;</div>
+          </div>
+          <div class="work-info">
+            <span class="work-tag">Campaign</span>
+            <h3>Project Title</h3>
+            <p>Brand Name &mdash; Short description of the work and what made it effective. One to two sentences max.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="container">
+      <h2>Want to make something together?</h2>
+      <a href="contact.html" class="btn btn-primary">Get in touch</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>&copy; 2026 Tim Barge</span>
+      <div class="footer-links">
+        <a href="work.html">Work</a>
+        <a href="acting.html">Acting</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.work-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        cards.forEach(card => {
+          if (filter === 'all' || card.dataset.category === filter) {
+            card.style.opacity = '1';
+            card.style.pointerEvents = 'auto';
+            card.style.transform = 'scale(1)';
+          } else {
+            card.style.opacity = '0.15';
+            card.style.pointerEvents = 'none';
+            card.style.transform = 'scale(0.97)';
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
