@@ -292,14 +292,11 @@ nav ul li a.active::after {
   border-top: 1px solid var(--border);
 }
 
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5rem;
-  align-items: start;
+.about-body {
+  max-width: 620px;
 }
 
-.about-text h2 {
+.about-body h2 {
   font-family: var(--font-sans);
   font-size: 2.25rem;
   font-weight: 700;
@@ -307,49 +304,16 @@ nav ul li a.active::after {
   letter-spacing: -0.02em;
 }
 
-.about-text p {
+.about-body p {
   color: var(--text-muted);
   margin-bottom: 1rem;
   font-size: 1.05rem;
   line-height: 1.75;
 }
 
-.about-text .text-link {
+.about-body .text-link {
   display: inline-block;
   margin-top: 0.5rem;
-}
-
-.about-stats {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  padding-top: 0.5rem;
-}
-
-.stat {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid var(--border);
-}
-
-.stat:last-child {
-  border-bottom: none;
-  padding-bottom: 0;
-}
-
-.stat-num {
-  font-family: var(--font-sans);
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--accent);
-}
-
-.stat-label {
-  font-size: 0.8rem;
-  color: var(--text-dim);
-  letter-spacing: 0.05em;
 }
 
 /* =============================================
@@ -413,12 +377,12 @@ nav ul li a.active::after {
   border-top: 1px solid var(--border);
 }
 
-.cta-band h2 {
-  font-family: var(--font-sans);
-  font-size: clamp(1.75rem, 4vw, 3rem);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  margin-bottom: 2rem;
+.cta-note {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  max-width: 480px;
+  margin: 0 auto 2rem;
+  line-height: 1.65;
 }
 
 /* =============================================
@@ -911,7 +875,6 @@ a.contact-value:hover {
     gap: 1.25rem;
   }
 
-  .about-grid,
   .contact-grid {
     grid-template-columns: 1fr;
     gap: 3rem;
